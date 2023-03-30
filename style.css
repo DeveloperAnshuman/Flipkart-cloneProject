@@ -1,0 +1,782 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f3f6;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #2874f0;
+}
+
+.container {
+    padding: 0 8px;
+    margin: 0;
+}
+
+/* header */
+header {
+    background-color: var(--primary-color);
+    height: 56px;
+    justify-content: center;
+    display: flex;
+}
+header .nav-container{
+    display: flex;
+     justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+header .nav-container .logo {
+    display: flex;
+    min-width: 137px;
+    justify-content: flex-end;
+}
+header .nav-container .logo img{
+    width: 75px;
+}
+
+  
+
+header .search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+header .search .search-container{
+    width: 360px;
+    height: 36px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+    display: flex;
+    margin: 0;
+    position: relative;
+    padding: 0 16px;
+}
+header .search .search-container input {
+    width: calc(280px);
+    padding: 16px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+header .search .search-container button {
+    width: 56px;
+    height: 100%;
+    padding:0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 0%;
+   
+}
+
+header .login {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+header .login button {
+    height: fit-content;
+    width: 122px;
+    padding: 5px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-color);
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+header .become-seller {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .more{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+header .more svg {
+    margin-left: 8px;
+    rotate: -90deg;
+}
+
+header .cart {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+}
+header .cart svg {
+    margin-right: 8px;
+}
+
+.section-1-item {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+  
+}
+
+.section-1-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-1-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-1-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 0;
+    max-width: calc(100% / 3);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    flex-wrap: nowrap;
+}
+
+/* section 2 */
+.section-2-container {  
+    flex: 1 1 auto;
+    height: 100%;
+    width: 112%;
+    margin-top: 12px;
+    height: 362px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-2-offers {
+    width: 250px;
+    height: 100%;
+    background-image: url('https://rukminim1.flixcart.com/fk-p-flap/278/278/image/7593e7b6640822c1.jpg?q=90');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.section-2-heading {
+    text-align: center;
+}
+
+.section-2-offers-viewall {
+    margin-top: 50px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-2-offers-viewall button {
+    margin-top: 24px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.section-2-list {
+    height: 100%;
+    width: calc(100% - 230px);
+    display: flex;
+    overflow-x: auto;
+    flex: 1 1 auto;
+}
+
+.section-2-item {
+    width: 250px;
+    height: 100%;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+.section-2-item img {
+    max-width: 200px;
+    max-height: 200px;
+    flex: 1 1 auto;
+}
+
+.section-2-item-head {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.section-2-item-price {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #388e3c;
+}
+
+.section-2-item-explore {
+    opacity: 0.6;
+    margin-top: 12px;
+    font-weight: 300;
+    font-size: 12px;
+}
+  
+
+
+/* section 3*/
+.section-3-container {  
+    height: 100%;
+    width: 112%;
+    margin-top: 12px;
+    height: 362px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-3-offers {
+    width: 250px;
+    height: 100%;
+    background-image: url('https://rukminim1.flixcart.com/fk-p-flap/278/278/image/30c9dd7e9c28b96a.jpg?q=90');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.section-3-heading {
+    text-align: center;
+}
+
+.section-3-offers-viewall {
+    margin-top: 50px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-3-offers-viewall button {
+    margin-top: 24px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.section-3-list {
+    height: 100%;
+    width: calc(100% - 230px);
+    display: flex;
+    overflow-x: auto;
+}
+
+.section-3-item {
+    width: 250px;
+    height: 100%;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3-item img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.section-3-item-head {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.section-3-item-price {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #388e3c;
+}
+
+.section-3-item-explore {
+    opacity: 0.6;
+    margin-top: 12px;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+  
+
+
+
+
+/* section 4*/
+.section-4-container {  
+    height: 100%;
+    width: 112%;
+    margin-top: 12px;
+    height: 362px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-4-offers {
+    width: 250px;
+    height: 100%;
+    background-image: url('https://rukminim1.flixcart.com/fk-p-flap/278/278/image/31d46a8fd93eeedd.jpg?q=90');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.section-4-heading {
+    text-align: center;
+}
+
+.section-4-offers-viewall {
+    margin-top: 50px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-4-offers-viewall button {
+    margin-top: 24px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.section-4-list {
+    height: 100%;
+    width: calc(100% - 230px);
+    display: flex;
+    overflow-x: auto;
+}
+
+.section-4-item {
+    width: 250px;
+    height: 100%;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-4-item img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.section-4-item-head {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.section-4-item-price {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #388e3c;
+}
+
+.section-4-item-explore {
+    opacity: 0.6;
+    margin-top: 12px;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+  
+ 
+  
+/* section 5*/
+.section-5-container {  
+    height: 100%;
+    width: 112%;
+    margin-top: 12px;
+    height: 362px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.4;
+}
+
+.section-5-offers {
+    width: 250px;
+    height: 100%;
+    background-image: url('https://rukminim1.flixcart.com/fk-p-flap/278/278/image/86e6d52663901503.jpg?q=90');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.section-5-heading {
+    text-align: center;
+  
+}
+
+.section-5-offers-viewall {
+    margin-top: 50px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-5-offers-viewall button {
+    margin-top: 24px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.section-5-list {
+    height: 100%;
+    width: calc(100% - 230px);
+    display: flex;
+    overflow-x: auto;
+}
+
+.section-5-item {
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-5-item img {
+    max-width: 200px;
+    max-height: 180px;
+}
+
+.section-5-item-head {
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.section-5-item-price {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #388e3c;
+}
+
+.section-5-item-explore {
+    opacity: 0.6;
+    margin-top: 12px;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+  
+
+/* Information */
+.information{
+    background-color: white;
+    color: #878787;
+    margin: 2.5% 0%;
+}
+
+.information h1{
+    font-size: 24px;
+}
+
+.information h2{
+    font-size: 20px;
+}
+
+.info{
+    font-size: 12px;
+    padding-bottom: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Footer */
+footer{
+    background-color: #172337;
+    color: white;
+    padding-top: 2%;
+    margin-top: 12px;
+}
+
+.Footer h6{
+    color: #878787;
+    font-size: 10px;
+}
+
+.Footer > div{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.Footer a{
+    color: white;
+    line-height: 20px;
+}
+
+.Footer p{
+    margin: 0;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+footer i{
+    color: gold;
+}
+
+footer span{
+    font-size: .75em;
+    cursor: pointer;
+}
+
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+    .section-2-container {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .section-2-offers {
+      width: 100%;
+      height: 250px;
+      background-position: center;
+      margin-bottom: 12px;
+    }
+    
+    .section-2-list {
+      width: 100%;
+    }
+    
+    .section-2-item {
+      width: 150px;
+      padding: 0px 5px;
+    }
+    
+    .section-2-item img {
+      max-width: 120px;
+      max-height: 120px;
+    }
+    
+    .section-2-item-head {
+      margin-top: 8px;
+      font-size: 12px;
+    }
+    
+    .section-2-item-price {
+      margin-top: 6px;
+      font-size: 14px;
+    }
+    
+    .section-2-item-explore {
+      margin-top: 6px;
+      font-size: 12px;}
+    }
+    
+@media screen and (max-width: 768px) {
+    .section-3-container {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .section-3-offers {
+      width: 100%;
+      height: 250px;
+      background-position: center;
+      margin-bottom: 12px;
+    }
+    
+    .section-3-list {
+      width: 100%;
+    }
+    
+    .section-3-item {
+      width: 150px;
+      padding: 0px 5px;
+    }
+    
+    .section-3-item img {
+      max-width: 120px;
+      max-height: 120px;
+    }
+    
+    .section-3-item-head {
+      margin-top: 8px;
+      font-size: 12px;
+    }
+    
+    .section-3-item-price {
+      margin-top: 6px;
+      font-size: 14px;
+    }
+    
+    .section-3-item-explore {
+      margin-top: 6px;
+      font-size: 12px;}
+    }
+
+    @media screen and (max-width: 768px) {
+        .section-4-container {
+          flex-direction: column;
+          height: auto;
+        }
+        
+        .section-4-offers {
+          width: 100%;
+          height: 250px;
+          background-position: center;
+          margin-bottom: 12px;
+        }
+        
+        .section-4-list {
+          width: 100%;
+        }
+        
+        .section-4-item {
+          width: 150px;
+          padding: 0px 5px;
+        }
+        
+        .section-4-item img {
+          max-width: 120px;
+          max-height: 120px;
+        }
+        
+        .section-4-item-head {
+          margin-top: 8px;
+          font-size: 12px;
+        }
+        
+        .section-4-item-price {
+          margin-top: 6px;
+          font-size: 14px;
+        }
+        
+        .section-4-item-explore {
+          margin-top: 6px;
+          font-size: 12px;}
+        }
+
+        
+@media screen and (max-width: 768px) {
+    .section-5-container {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .section-5-offers {
+      width: 100%;
+      height: 250px;
+      background-position: center;
+      margin-bottom: 12px;
+    }
+    
+    .section-5-list {
+      width: 100%;
+    }
+    
+    .section-5-item {
+      width: 150px;
+      padding: 0px 5px;
+    }
+    
+    .section-5-item img {
+      max-width: 120px;
+      max-height: 120px;
+    }
+    
+    .section-5-item-head {
+      margin-top: 8px;
+      font-size: 12px;
+    }
+    
+    .section-5-item-price {
+      margin-top: 6px;
+      font-size: 14px;
+    }
+    
+    .section-5-item-explore {
+      margin-top: 6px;
+      font-size: 12px;
+    }
+  }
+  
+  
+      
+  
