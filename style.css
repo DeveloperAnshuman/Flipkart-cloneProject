@@ -175,6 +175,36 @@ header .cart svg {
     flex-wrap: nowrap;
    
 }
+#main{
+  height: 800px;
+  z-index:1;
+  background-color: bisque;
+}
+
+#coupon{
+  height:300px;
+  width:675px;
+  background: none;
+  z-index:100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  outline: groove;
+  background-color: #b4bdcc;
+}
+
+#coupon button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  color: white;
+  width: 30px;
+}
 
 /* section 2 */
 
@@ -514,7 +544,4 @@ footer span{
       font-size: 12px;
     }
   }
-  
-  
-      
   
