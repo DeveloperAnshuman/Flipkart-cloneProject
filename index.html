@@ -261,12 +261,11 @@
                     <div class="weather-container">
                         <span class="weather-icon"></span>
                         <p id="weather"></p>
-                        <img id="weather-img" src="https://openweathermap.org/img/wn/01d@2x.png"
-                            alt="Weather Image" />
-                            <p>Clear Sky</p>
+                        <img id="weather-img" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Image" />
+                        <p>Clear Sky</p>
+                    
                     </div>
                 </div>
-                
                 <script>
                     let x = document.getElementById('out');
                     let y = document.getElementById('weather');
@@ -284,7 +283,7 @@
                         console.log(data)
                         let lat = data.coords.latitude
                         let lon = data.coords.longitude
-                       
+
                         const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
                         //api calling
                         fetch(url, { method: 'GET' })
@@ -296,7 +295,7 @@
                                 let cityName = data.city.name;
                                 let temp = data.list[0].temp.day + " °C"
                                 y.innerText = ` ${cityName},IN
-                                 ${temp} ` 
+                                 ${temp} `
 
 
                                 let currentTime = new Date().getTime() / 1000;
