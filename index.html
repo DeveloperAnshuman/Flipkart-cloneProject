@@ -252,31 +252,68 @@
                         <div class="section-2-item-price">From ₹6499</div>
                         <div class="section-2-item-explore">Explore Now!</div>
                     </div>
-                    <div class="section-2-item">
-                        <img src="https://rukminim1.flixcart.com/image/400/400/ke4kjgw0/printer/f/x/7/brother-dcp-b7500d-original-imafuvbyfgt5p9fr.jpeg?q=70"" alt="">
-            <div class=" section-2-item-head">Printers
-                    </div>
-                    <div class="section-2-item-price">From ₹3999</div>
-                    <div class="section-2-item-explore">Shop Now!</div>
-                </div>
 
-                <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/kx50gi80/projector/r/9/p/zeb-pixa-play-12-5-6-dobly-audio-led-projector-zebronics-original-imag9z3yujqmzqt4.jpeg?q=70"
-                        alt="">
-                    <div class="section-2-item-head">Projectors</div>
-                    <div class="section-2-item-price">From ₹9999</div>
-                    <div class="section-2-item-explore">Explore Now!</div>
+
                 </div>
-                <div class="section-2-item">
-                    <img src="https://rukminim1.flixcart.com/image/400/400/xif0q/power-bank/j/i/v/power-bank-dx09-20000-mah-20000-dx09-20k-callmate-original-imagn22tuac3hqnz.jpeg?q=70"
-                        alt="">
-                    <div class="section-2-item-head">Premium Powerbanks</div>
-                    <div class="section-2-item-price">From ₹229</div>
-                    <div class="section-2-item-explore">Explore Now!</div>
+                <div class="my-container">
+                    <button-1 onClick="geolocation()">Weather</button-1>
+                    <p id="out"></p>
+                    <div class="weather-container">
+                        <span class="weather-icon"></span>
+                        <p id="weather"></p>
+                        <img id="weather-img" src="https://openweathermap.org/img/wn/01d@2x.png"
+                            alt="Weather Image" />
+                            <p>Clear Sky</p>
+                    </div>
                 </div>
-            </div>
-    </div>
-    </section>
+                
+                <script>
+                    let x = document.getElementById('out');
+                    let y = document.getElementById('weather');
+                    let img = document.getElementById('weather-img');
+
+                    function geolocation() {
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition)
+                        } else {
+                            x.innerText = "Geo Not Supported"
+                        }
+                    }
+
+                    function showPosition(data) {
+                        console.log(data)
+                        let lat = data.coords.latitude
+                        let lon = data.coords.longitude
+                       
+                        const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`;
+                        //api calling
+                        fetch(url, { method: 'GET' })
+                            //return promise
+                            .then((res) => res.json())
+                            //resolve the promise
+                            .then((data) => {
+                                console.log(data)
+                                let cityName = data.city.name;
+                                let temp = data.list[0].temp.day + " °C"
+                                y.innerText = ` ${cityName},IN
+                                 ${temp} ` 
+
+
+                                let currentTime = new Date().getTime() / 1000;
+
+                                let sunrise = data.city.sunrise;
+                                let sunset = data.city.sunset;
+                                // if it is currently daytime
+                                if (currentTime > sunrise && currentTime < sunset) {
+                                    img.src = 'https://openweathermap.org/img/wn/01d.png';
+                                } else {
+                                    // it is nighttime
+                                    img.src = 'https://openweathermap.org/img/wn/01n.png';
+                                }
+                            })
+                    }
+                </script>
+        </section>
     </div>
 
     <!-- section 3 -->
